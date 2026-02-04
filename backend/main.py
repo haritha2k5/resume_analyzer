@@ -1,3 +1,6 @@
+from pathlib import Path
+from dotenv import load_dotenv
+load_dotenv(Path(__file__).parent / ".env")
 from fastapi import FastAPI, UploadFile, File
 from backend.services.llm import analyze_resume
 from backend.utils.pdf_reader import extract_text
